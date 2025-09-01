@@ -1,0 +1,70 @@
+/* Estilos da Seção portfólio */
+.portfolio {
+    padding: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.portfolio__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 5rem;
+}
+
+.portfolio__card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--preto);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border: 1px solid rgba(94, 5, 5, 0.479);
+    border-radius: 0.75rem;
+    /* Controla o dimensionamento dos cards para alinhamento */
+    flex: 1 1 18.75rem; 
+    max-width: 25rem; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de elevação no card ao passar o mouse */
+.portfolio__card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 0.625rem 1.25rem rgba(165, 77, 77, 0.678);
+}
+
+.portfolio__imagem {
+    width: 100%;
+    height: 18.75rem;
+    object-fit: cover; 
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio__descricao { 
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto; 
+}
+
+.portfolio__botao {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.3125rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Efeito de destaque no botão ao passar o mouse */
+.portfolio__botao:hover {
+    background-color: var(--vermelho-médio);
+    box-shadow: 0 0.625rem 1.25rem rgba(158, 0, 0, 0.384);
+}

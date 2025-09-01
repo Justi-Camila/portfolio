@@ -1,0 +1,77 @@
+/* Estilos da Seção Sobre Mim */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 0.125rem 0.125rem 1rem #bd1616;
+}
+
+.sobre-mim {
+    padding: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.sobre-mim__container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 10rem;
+}
+
+.sobre-texto {
+    background-color: rgba(0, 0, 0, 0.301); 
+    padding: 1.5rem;
+    border-radius: 3.125rem;
+}
+
+.sobre-mim__redesocial {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.sobre-mim__redesocial a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Animação de flutuação para as imagens de rede social*/
+.sobre-mim__redesocial a:hover img {
+    transform: scale(1.2);
+}
+
+.imagem {
+    max-width: 18.75rem;
+    border-radius: 50%;
+    animation: movimentacao 3s ease-out infinite;
+}
+
+/* Animação de flutuação para a imagem de perfil */
+@keyframes movimentacao {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    70% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Responsividade em telas menores que 50rem, os itens são empilhados verticalmente */
+@media screen and (max-width: 50rem) {
+    .sobre-mim__container {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+}

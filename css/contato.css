@@ -1,0 +1,49 @@
+/*Estilos da Seção Contato*/
+.contato {
+    padding: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.formulario {
+    max-width: 21.9rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.formulario__container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.formulario__botao {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Animação de hover para o botão de envio. */
+.formulario__botao:hover {
+    background-color: var(--vermelho-médio);
+    transform: translateY(-5px);
+    box-shadow: 0 0.625rem 1.25rem rgba(255, 135, 135, 0.801);
+}
+
+#nome, #email, #mensagem {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(158, 0, 0, 0.384);
+}

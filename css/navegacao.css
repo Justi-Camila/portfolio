@@ -1,0 +1,106 @@
+/* Estilos da barra de navegação principal */
+.navegacao {
+    position: fixed;
+    top: 0;
+    background-color: var(--preto);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.lista a {
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    text-shadow: 0.125rem 0.125rem 0.25rem #bd1616;
+    padding: 0.5rem 0;
+}
+
+.navegacao .lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacao .lista a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 1.5rem 0;
+    display: block;
+}
+
+/* Animação de sublinhado nos links da navegação */
+.lista a::before {
+    content: "";
+    position: absolute;
+    height: 0.125rem;
+    width: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, var(--vermelho), var(--vermelho-médio));
+    transition: width 0.6s ease;
+}
+
+.lista a:hover::before {
+    width: 100%;
+}
+
+/* Estilos do botão de menu para telas menores */
+.navegacao-botao {
+    display: none;
+    flex-direction: column;
+    gap: 0.3125rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.625rem;
+}
+
+.navegacao-botao .bar {
+    width: 1.57rem;
+    height: 0.1875rem;
+    background-color: var(--branco);
+}
+
+@media (max-width: 50rem) {
+    .navegacao {
+        padding: 1rem 2rem;
+    }
+
+    .navegacao-botao {
+        display: flex;
+    }
+
+    .navegacao .lista {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        background-color: var(--preto);
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        gap: 0;
+    }
+
+    /* Classe 'active' para exibir a lista de navegação em telas menores */
+    .navegacao .lista.active {
+        display: flex; 
+    }
+    
+    .navegacao .lista a {
+        padding: 1rem 0;
+        border-top: 1px solid var(--vermelho-médio);
+        border-bottom: 1px solid var(--vermelho-médio);
+    }
+
+    body {
+        padding-top: 2.5rem;
+    }
+}
